@@ -65,7 +65,7 @@ interactive-llm-reasoning-traces/
   pip install -r requirements.txt
   
   2. Set API key
-  export OPENAI_API_KEY="YOUR_API_KEY"
+  export OPENAI_API_KEY="API_KEY"
   
   3. Generate reasoning outputs
   python scripts/run_generate.py
