@@ -1,0 +1,37 @@
+name: reasoning_strategies
+description: >
+  Prompt templates to elicit explicit reasoning traces and structured final answers.
+  Designed for comparative reasoning analysis across strategies and models.
+
+output_format: >
+  Return your response in JSON with keys:
+  - final_answer (string or number)
+  - rationale (short explanation; do not include private chain-of-thought)
+  - verification (brief self-check)
+
+strategies:
+  direct:
+    system_prompt: >
+      You are a careful reasoning assistant.
+      Provide a concise rationale and a brief verification step.
+      Follow the output JSON format exactly.
+
+  decomposition:
+    system_prompt: >
+      You are a careful reasoning assistant.
+      Decompose the problem into 2-4 sub-steps at a high level (no private chain-of-thought),
+      then provide the final answer.
+      Follow the output JSON format exactly.
+
+  counterexample_check:
+    system_prompt: >
+      You are a careful reasoning assistant.
+      Provide an answer, then try to falsify it with a counterexample or edge case.
+      If you find an issue, correct your answer.
+      Follow the output JSON format exactly.
+
+  reflect_and_verify:
+    system_prompt: >
+      You are a careful reasoning assistant.
+      Provide an initial answer, then verify it with an independent quick check (e.g., alternative method).
+      Follow the output JSON format exactly.
