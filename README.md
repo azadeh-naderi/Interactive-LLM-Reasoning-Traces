@@ -59,6 +59,20 @@ interactive-llm-reasoning-traces/
 
 ---
 
+
+## Quick Start
+  1. Install dependencies
+  pip install -r requirements.txt
+  
+  2. Set API key
+  export OPENAI_API_KEY="YOUR_API_KEY"
+  
+  3. Generate reasoning outputs
+  python scripts/run_generate.py
+  
+  4. Compare strategies
+  python scripts/run_compare.py
+
 ## Output Schema
 
   Each model response is requested in the following JSON format:
@@ -73,18 +87,6 @@ interactive-llm-reasoning-traces/
 
 This design supports safe, consistent parsing while avoiding exposure of private reasoning traces.
 
-## Quick Start
-  1. Install dependencies
-  pip install -r requirements.txt
-  
-  2. Set API key
-  export OPENAI_API_KEY="YOUR_API_KEY"
-  
-  3. Generate reasoning outputs
-  python scripts/run_generate.py
-  
-  4. Compare strategies
-  python scripts/run_compare.py
 
 
 Results will be saved to the results/ directory.
