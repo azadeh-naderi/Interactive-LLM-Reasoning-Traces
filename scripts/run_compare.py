@@ -1,6 +1,5 @@
 import json
 from pathlib import Path
-
 from engine.trace_comparator import compare_all
 
 
